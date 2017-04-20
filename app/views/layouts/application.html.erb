@@ -9,6 +9,16 @@
   </head>
 
   <body>
+  <%= render 'home/header' %>   
+   <div class="container">
+   <p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
     <%= yield %>
+    <% flash.each do |name, msg| %>5
+<%= content_tag(:div, msg, class: "alert alert-
+info") %>
+
+<% end %>
+ </div>
   </body>
 </html>
